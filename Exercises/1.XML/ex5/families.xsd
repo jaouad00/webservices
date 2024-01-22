@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- edited with XMLSpy v2022 rel. 2 (x64) (http://www.altova.com) by  (ABIS Training and Consulting) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://abis.be/families" xmlns:ns1="http://abis.be/address" targetNamespace="http://abis.be/families" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://abis.be/address" schemaLocation="address.xsd"/>
 	<xs:element name="families">
 		<xs:annotation>
 			<xs:documentation>Comment describing your root element</xs:documentation>
@@ -10,11 +12,14 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="familyName">
-								<xs:complexType>
-									<xs:attribute name="blabla"/>
-								</xs:complexType>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
 							</xs:element>
-							<xs:element name="address" type="addressType"/>
+							<xs:element ref="ns1:address"/>
 							<xs:element name="members">
 								<xs:complexType>
 									<xs:sequence>
@@ -30,7 +35,15 @@
 														</xs:complexType>
 													</xs:element>
 													<xs:element name="birthdate" type="xs:string"/>
-													<xs:element name="gender" type="xs:string"/>
+													<xs:element name="gender">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:enumeration value="M"/>
+																<xs:enumeration value="F"/>
+																<xs:enumeration value="X"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -43,8 +56,8 @@
 										<xs:element name="pet" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="species" type="xs:string"/>
-													<xs:element name="name" type="xs:string"/>
+													<xs:element name="species"/>
+													<xs:element name="name"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -57,13 +70,4 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:complexType name="addressType">
-		<xs:sequence>
-			<xs:element name="street" type="xs:string"/>
-			<xs:element name="nr" type="xs:string"/>
-			<xs:element name="city" type="xs:string"/>
-			<xs:element name="countryCode" type="xs:string"/>
-		</xs:sequence>
-		<xs:attribute name="zipcode" type="xs:string"/>
-	</xs:complexType>
 </xs:schema>
