@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://abis.be/persons persons.xsd" xmlns="http://abis.be/persons" xmlns:base="http://abis.be/base">
+	<person nr="1">
+		<name>
+			<lastName>Schillebeeckx</lastName>
+			<firstName>Sandy</firstName>
+		</name>
+		<age>42</age>
+		<base:country countryCode="BE">Belgium</base:country>
+	</person>
+	<person nr="2">
+		<name>
+			<lastName>Uiterwijk</lastName>
+			<firstName/>
+		</name>
+		<age>0</age>
+		<base:country countryCode="NL">The Netherlands</base:country>
+		<accountNumber>NL20 INGB 0001234567</accountNumber>
+	</person>
+</persons>
