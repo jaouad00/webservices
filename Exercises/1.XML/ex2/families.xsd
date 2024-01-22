@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="families">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="family" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="familyName" type="xs:string"/>
+							<xs:element name="address">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="street" type="xs:string"/>
+										<xs:element name="nr" type="xs:string"/>
+										<xs:element name="city" type="xs:string"/>
+										<xs:element name="countryCode" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="zipcode" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="members">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="member" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="name">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="firstName" type="xs:string"/>
+																<xs:element name="lastName" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="birthdate" type="xs:string"/>
+													<xs:element name="gender" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="pets" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="pet" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="species" type="xs:string"/>
+													<xs:element name="name" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

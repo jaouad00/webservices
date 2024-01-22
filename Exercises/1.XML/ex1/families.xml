@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<families>
+	<family>
+		<familyName>Van Buggenhout - Schillebeeckx</familyName>
+		<address zipcode="3000">
+			<street>Somestreet</street>
+			<nr>1</nr>
+			<city>Kessel-Lo</city>
+			<countryCode>BE</countryCode>
+		</address>
+		<members>
+			<member>
+				<name>
+					<firstName>Sandy</firstName>
+					<lastName>Schillebeeckx</lastName>
+				</name>
+				<birthdate>10/04/1978</birthdate>
+				<gender>F</gender>
+			</member>
+			<member>
+				<name>
+					<firstName>Kristoff</firstName>
+					<lastName>Van Buggenhout</lastName>
+				</name>
+				<birthdate/>
+				<gender>M</gender>
+			</member>
+		</members>
+	</family>
+	<family>
+		<familyName>Wijnants-Otten</familyName>
+		<address zipcode="2300">
+			<street>Somestreet</street>
+			<nr>1</nr>
+			<city>Turnhout</city>
+			<countryCode>BE</countryCode>
+		</address>
+		<members>
+			<member>
+				<name>
+					<firstName>Danny</firstName>
+					<lastName>Wijnants</lastName>
+				</name>
+				<birthdate>18/01/1971</birthdate>
+				<gender>M</gender>
+			</member>
+			<member>
+				<name>
+					<firstName>Peggy</firstName>
+					<lastName>Otten</lastName>
+				</name>
+				<birthdate>06/06/1972</birthdate>
+				<gender>F</gender>
+			</member>
+			<member>
+				<name>
+					<firstName>Robin</firstName>
+					<lastName>Wijnants</lastName>
+				</name>
+				<birthdate>18/08/2000</birthdate>
+				<gender>M</gender>
+			</member>
+			<member>
+				<name>
+					<firstName>Yoshin</firstName>
+					<lastName>Wijnants</lastName>
+				</name>
+				<birthdate>04/09/2001</birthdate>
+				<gender>M</gender>
+			</member>
+		</members>
+		<pets>
+			<pet>
+				<species>dog</species>
+				<name>Mona</name>
+			</pet>
+			<pet>
+				<species>dog</species>
+				<name>Hashi</name>
+			</pet>
+			<pet>
+				<species>cat</species>
+				<name>Felix</name>
+			</pet>
+		</pets>
+	</family>
+</families>
